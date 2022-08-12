@@ -56,15 +56,3 @@ class DiaryEntry
 
     end
 end
-
-# entry = DiaryEntry.new("Entry01", "This are the contents of the Entry01 in the diary")
-# entry.title
-# entry.contents
-# entry.count_words
-# entry.reading_time(1)
-
-# entry = DiaryEntry.new("cristo bendito", "qué pedrá que tengo encima hoy por Dios y la virgen")
-# entry.title
-# entry.contents
-# entry.count_words
-# entry.reading_time(10)
