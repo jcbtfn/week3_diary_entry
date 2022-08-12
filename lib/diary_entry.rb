@@ -38,7 +38,7 @@ class DiaryEntry
     # what has already been read, until the contents is fully read.
     # The next call after that it should restart from the beginning.
 
-        @contents.split
+        #@contents.split
         #puts @contents.split[(0+@chunk)...(wpm*minutes+@chunk)].join(" ")
         #puts "Chunk original: " + @chunk.to_s
         #puts "Content split length: " + @contents.split.length.to_s
