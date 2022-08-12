@@ -50,7 +50,8 @@ class DiaryEntry
         to_show = @contents.split[(0+@chunk)...(wpm*minutes+@chunk)].join(" ")
         @chunk += wpm*minutes
         #puts "Chunks + wpm*minutes: " + @chunk.to_s
-        #puts aux + "termino aquí"
+        #puts to_show + " <--- termino aquí"
+        #puts to_show.split.length
         return to_show
 
     end

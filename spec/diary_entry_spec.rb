@@ -58,4 +58,14 @@ RSpec.describe "DiaryEntry class" do
         expect(entry.reading_chunk(15,1)).to eq "Cras ornare sapien vel interdum dapibus. Curabitur cursus pulvinar consequat. Praesent aliquam nulla et ligula"
     end
     
+    it "returns a string with a chunk of the contents that the user could read 
+        in the given number of minutes. - with imperfect conditions -" do
+        entry = DiaryEntry.new("Friday 06/06/2006", text3_100)
+        expect(entry.reading_chunk(30,1)).to eq "Mauris sit amet mauris a velit dictum malesuada. Quisque nunc mi, ullamcorper et tempus vitae, eleifend ut urna. Donec vehicula massa eu pellentesque rhoncus. Praesent ultricies diam dui, vitae varius"
+        expect(entry.reading_chunk(30,1)).to eq "mauris pellentesque ac. Proin mattis dictum tristique. Donec luctus arcu et consequat blandit. Duis sapien tortor, mattis at dui id, semper tempus erat. Donec sed placerat nulla. Suspendisse mattis ipsum"
+        expect(entry.reading_chunk(30,1)).to eq "in lacinia semper. Mauris quis tortor ut magna consectetur accumsan. Nunc pharetra dictum diam ut cursus. Suspendisse nec tellus non nunc sollicitudin auctor at quis orci. Quisque odio mi, faucibus"
+        expect(entry.reading_chunk(30,1)).to eq "non hendrerit eget, ornare sed nisi. Donec enim est, placerat."
+        expect(entry.reading_chunk(30,1)).to eq "Mauris sit amet mauris a velit dictum malesuada. Quisque nunc mi, ullamcorper et tempus vitae, eleifend ut urna. Donec vehicula massa eu pellentesque rhoncus. Praesent ultricies diam dui, vitae varius"
+    end
+
 end
